@@ -172,26 +172,21 @@ body {
   color: #C8A951;
 }
 
-.service{
+.service {
   width: 90%;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 2%;
-  border-radius: 1%;
+  margin: 2% auto 5%;
   display: flex;
+  flex-wrap: wrap; /* Permite que los elementos bajen en pantallas pequeñas */
   background-color: #fff;
-  margin-bottom: 5%;
+  border-radius: 1%;
 }
 
-.iconService{
-  display: flex;
-}
-
-.service1{
+.service1 {
   width: 30%;
+  object-fit: cover; /* Evita deformaciones */
 }
 
-.titleService{
+.titleService {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -201,6 +196,32 @@ body {
   box-sizing: border-box;
   color: #C8A951;
   font-size: 2em;
+}
+
+/* 🔽 RESPONSIVE: Para tablets y móviles */
+@media (max-width: 768px) {
+  .service {
+    flex-direction: column; /* Imagen y texto uno debajo del otro */
+    text-align: center;
+  }
+
+  .service1 {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: auto;
+  }
+
+  .titleService {
+    width: 100%;
+    font-size: 1.5em; /* Reduce tamaño del texto en móvil */
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleService {
+    font-size: 1.2em; /* Más pequeño para pantallas muy reducidas */
+    padding: 0.8rem;
+  }
 }
 
 /* Animación fade-in */
