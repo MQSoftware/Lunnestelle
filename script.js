@@ -7,3 +7,12 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('scrolled')
   }
 })
+
+
+
+const about = document.querySelector('.aboutUsBox');
+window.addEventListener('scroll', () => {
+  if (about.getBoundingClientRect().top < window.innerHeight - 100) {
+    about.classList.add('visible');
+  }
+});
